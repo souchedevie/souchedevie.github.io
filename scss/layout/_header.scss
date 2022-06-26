@@ -1,0 +1,59 @@
+header {
+    height: 100vh;
+    overflow: hidden;
+
+    & > div {
+        z-index: 10;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        max-height: 100%;
+        padding: 3rem;
+
+        @media (min-width: $bp-medium) {
+            padding: 0;
+            padding-right: 4rem;
+            padding-bottom: 2rem;
+        }
+
+        & > div {
+            color: $main-blue;
+            text-shadow: white 1px 0 50px;
+            font-family: "Abhaya Libre";
+            font-size: 3rem;
+            text-align: right;
+
+            @media (min-width: $bp-medium) {
+                font-size: 6rem;
+            }
+
+            & > img {
+                width: 2rem;
+            }
+        }
+    }
+
+    & > video {
+        z-index: 9;
+        display: none;
+
+        @media (min-width: $bp-medium) {
+            display: block;
+            max-width: 100%;
+        }
+    }
+
+    & > img {
+        display: block;
+        height: 100%;
+        transform: translateX(-30%);
+
+        @media (min-width: $bp-medium) {
+            display: none;
+        }
+    }
+}

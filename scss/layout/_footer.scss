@@ -1,0 +1,45 @@
+footer {
+    
+    background-color: $background-blue;
+    
+    .footer-content {
+
+        display: flex;
+
+        & > * {
+            margin: 20px;
+        }
+
+        & > .footer-link {
+
+            display: flex;
+            flex-direction: column;
+
+            a {
+                font-family: "TT Commons Light";
+                font-size: 1.5rem;
+                color: $main-white;
+                text-decoration: none;
+                white-space: nowrap;
+            }
+
+        }
+
+        & > .footer-logo-partner {
+
+            display: flex;
+            justify-content: center;
+
+            img {
+                margin: 15%;
+                width: 100%;
+            }
+
+            & > .footer-school-logo {
+                margin-right: 5%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

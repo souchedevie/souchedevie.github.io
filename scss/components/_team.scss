@@ -1,0 +1,30 @@
+.team {
+
+    & > .team-division {
+
+        & > .team-member {
+
+            h3, p, a {
+                margin: 0px;
+            }
+
+            h3 {
+                font-family: "AbhayaLibre-ExtraBold";
+                color: $main-blue;
+            }
+
+            p {
+                font-family: "Poppins-Light";
+                color: $main-blue;
+            }
+
+            a, a:visited {
+                font-family: "Poppins-Light";
+                color: $main-purple;
+            }
+
+        }
+        
+    }
+
+}

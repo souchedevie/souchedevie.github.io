@@ -1,0 +1,142 @@
+//////////////////////////////////////////////////////////////////////////
+//				BREAKPOINTS
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////// MEDIA QUERIES
+
+/////// RESPONSIVE AU DESSUS DU POINT SELECTIONNE
+// Exemple: @include responsive(md){}
+
+@mixin responsive($__size) {
+	@if map-has-key($grid-breakpoints, $__size) {
+	    @media (min-width: #{map-get($grid-breakpoints, $__size)}) {
+	    	@content;
+	    }
+  	}
+	@else {
+		@media screen and (min-width: $__size) { @content; }
+	}
+} 
+
+/////// RESPONSIVE STRICTEMENT ENTRE LES 2 POINTS SELECTIONNES
+// Exemple: @include responsive-entre(md,xl){}
+
+@mixin responsive-entre($__size-min, $__size-max) {
+	@if map-has-key($grid-breakpoints, $__size-min) and map-has-key($grid-breakpoints, $__size-max) {
+		$__size-min: map-get($grid-breakpoints, $__size-min);
+		$__size-max: map-get($grid-breakpoints, $__size-max) - 1px;
+	    @media screen and (min-width: $__size-min) and (max-width: $__size-max)  {
+	    	@content;
+	    }
+  	}
+	@else {
+		$__size-max: $__size-max - 1px;
+		@media screen and (min-width: $__size-min) and (max-width: $__size-max) { @content; }
+	}
+}
+
+
+/////// HAUTEUR RESPONSIVE AU DESSUS DU POINT SELECTIONNE
+// Exemple: @include responsive(600px){}
+
+@mixin responsive-height($__size) {
+	@media screen and (min-height: $__size) { @content; }
+}
+
+// _______________________________  phone version  _______________________________
+@media only screen and (max-width: $breaking-point) {
+	.team {
+		margin-top: 3rem;
+		& > .team-division {
+
+			& > .team-member {
+
+				display: flex; 
+				margin: 25px 0 0 0; 
+				margin-left: -12%;
+
+				.team-member-hl { 
+					position: relative;
+					display: block;
+					top: 10px;
+					height: 1px;
+					min-width: 20%;
+					width: 20%;
+					margin: 5px 10% 0 0;
+					background-color: $main-blue;
+				}
+				
+				h3 { font-size: 22px; }
+				p { font-size: 17px; }
+				a, a:visited { font-size: 17px; }
+			}
+		}
+	}
+	
+	footer {
+
+		padding: 80px;
+
+		.footer-content {
+
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			
+			& > .footer-link {
+				justify-content: center;
+				align-items: center;
+			}
+
+			& > .footer-logo-partner {
+				flex-direction: column-reverse;
+				align-items: center;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: $breaking-point) {
+
+	.team {
+
+		display: flex;
+		flex-direction: column;
+
+		& > .team-division {
+
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			margin-top: 3rem;
+
+			& > .team-member {
+				width: 100%;
+				h3 { font-size: 25px; }
+				p { font-size: 20px; }
+				a, a:visited { font-size: 20px; }
+			}
+
+		}
+
+	}
+
+	footer {
+    
+		padding: 80px;
+
+		.footer-content {
+
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+
+			& > * {
+				margin: 20px;
+			}
+
+			& > .footer-logo-partner {
+				align-items: center;
+			}
+		}
+	}
+}

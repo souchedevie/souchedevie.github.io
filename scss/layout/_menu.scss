@@ -1,0 +1,61 @@
+.menu {
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    font-family: "Abhaya Libre";
+    width: 100vw;
+    
+    @media (min-width: $bp-medium) {
+        width: auto;
+        height: 100vh;
+    }
+    
+    ul {
+        margin: 0;
+        padding: 1.5rem;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        box-sizing: border-box;
+        background-color: $main-blue;
+        
+        @media (min-width: $bp-medium) {
+            width: auto;
+            display: block;
+            background-color: transparent;
+        }
+
+        li {
+            list-style: none;
+            color: $main-blue;
+            font-size: 1.5rem;
+            text-align: center;
+            
+            @media (min-width: $bp-medium) {
+                margin-bottom: 0.5rem;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+
+                @media (min-width: $bp-medium) {
+                    color: $main-blue;
+                }
+            }
+        }
+    }
+
+    & > div {
+        display: none;
+
+        @media (min-width: $bp-medium) {
+            display: block;
+            height: 100%;
+            border-right: 1px solid $main-blue;
+        }
+    }
+}
