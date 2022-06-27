@@ -54,14 +54,11 @@ header > div > div > img {
 
 header > video {
   z-index: 9;
-  display: none;
-}
-
-@media (min-width: 750px) {
-  header > video {
-    display: block;
-    height: 100%;
-  }
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 header > img {
