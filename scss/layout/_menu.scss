@@ -1,61 +1,106 @@
+#burger {
+  position: fixed;
+  inset: 30px 30px auto auto;
+  z-index: 15;
+  background-color: $background-blue;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  @media (min-width: $bp-medium) {
+    display: none;
+  }
+  svg {
+    position: absolute;
+    margin: auto auto 6px auto;
+    inset: 0;
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+    cursor: pointer;
+    rect {
+      width: 48px;
+      height: 3px;
+      transition: transform 0.3s;
+      &:nth-child(1) {
+        y: 20px;
+        transform-origin: 24px 15px;
+      }
+      &:nth-child(2) {
+        transform-origin: 3px 17px;
+      }
+    }
+  }
+  &.active {
+    svg rect {
+      transition: transform 0.3s;
+      &:nth-child(1) {
+        transform: rotate(-45deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
 .menu {
-    z-index: 11;
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  font-family: "Abhaya Libre";
+  width: 100vw;
+  height: 100vh;
+  background-color: $background-blue;
+
+  @media (min-width: $bp-medium) {
+    width: auto;
+    height: 100vh;
+    background-color: transparent;
+  }
+
+  ul {
+    margin: auto;
+    padding: 1.5rem;
+    width: 100%;
+    // justify-content: space-between;
+    box-sizing: border-box;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    position: fixed;
-    top: 0;
-    font-family: "Abhaya Libre";
-    width: 100vw;
-    
+    gap: 40px;
+
     @media (min-width: $bp-medium) {
-        width: auto;
-        height: 100vh;
-    }
-    
-    ul {
-        margin: 0;
-        padding: 1.5rem;
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        box-sizing: border-box;
-        background-color: $main-blue;
-        
-        @media (min-width: $bp-medium) {
-            width: auto;
-            display: block;
-            background-color: transparent;
-        }
-
-        li {
-            list-style: none;
-            color: $main-blue;
-            font-size: 1.5rem;
-            text-align: center;
-            
-            @media (min-width: $bp-medium) {
-                margin-bottom: 0.5rem;
-            }
-
-            a {
-                text-decoration: none;
-                color: white;
-
-                @media (min-width: $bp-medium) {
-                    color: $main-blue;
-                }
-            }
-        }
+      margin: 0;
+      width: auto;
+      height: auto;
+      gap: 0;
     }
 
-    & > div {
-        display: none;
+    li {
+      list-style: none;
+      color: $main-blue;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      a {
+        text-decoration: none;
+        color: white;
 
         @media (min-width: $bp-medium) {
-            display: block;
-            height: 100%;
-            border-right: 1px solid $main-blue;
+          color: $main-blue;
         }
+      }
     }
+  }
+
+  & > div {
+    display: none;
+
+    @media (min-width: $bp-medium) {
+      display: block;
+      height: 100%;
+      border-right: 1px solid $main-blue;
+    }
+  }
 }
