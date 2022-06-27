@@ -54,14 +54,11 @@ header > div > div > img {
 
 header > video {
   z-index: 9;
-  display: none;
-}
-
-@media (min-width: 750px) {
-  header > video {
-    display: block;
-    height: 100%;
-  }
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 header > img {
@@ -375,6 +372,7 @@ p {
 
 body {
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 section {
@@ -530,6 +528,13 @@ section.dark-bg img.rotate {
     width: auto;
     right: 3rem;
     top: -7rem;
+  }
+}
+
+@media (max-width: 500px) {
+  section.dark-bg img.rotate {
+    -webkit-animation: none;
+            animation: none;
   }
 }
 
