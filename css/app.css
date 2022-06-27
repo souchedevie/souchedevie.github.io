@@ -160,21 +160,37 @@ header > img {
   }
 }
 
-footer {
+.footer {
   background-color: #181556;
-}
-
-footer .footer-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4rem 12%;
 }
 
-footer .footer-content > * {
+@media (min-width: 750px) {
+  .footer {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+.footer > * {
   margin: 20px;
 }
 
-footer .footer-content > .footer-link {
+.footer-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,7 +200,43 @@ footer .footer-content > .footer-link {
           flex-direction: column;
 }
 
-footer .footer-content > .footer-link a {
+.footer-content .footer-logo-yggdrasil {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 750px) {
+  .footer-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.footer-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 750px) {
+  .footer-link {
+    text-align: left;
+    margin-left: 5rem;
+  }
+}
+
+.footer-link a {
   font-family: "TT Commons Light";
   font-size: 1.5rem;
   color: #fff;
@@ -192,22 +244,7 @@ footer .footer-content > .footer-link a {
   white-space: nowrap;
 }
 
-footer .footer-content > .footer-logo-partner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-footer .footer-content > .footer-logo-partner img {
-  margin: 15%;
-  width: 100%;
-}
-
-footer .footer-content > .footer-logo-partner > .footer-school-logo {
-  margin-right: 5%;
+.footer-logo-partner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,6 +252,36 @@ footer .footer-content > .footer-logo-partner > .footer-school-logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media (min-width: 750px) {
+  .footer-logo-partner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.footer-logo-partner img {
+  margin: 15% 0;
+  width: 100%;
+}
+
+@media (min-width: 750px) {
+  .footer-logo-partner img {
+    margin: 0 15%;
+  }
+}
+
+.footer-logo-partner img:last-of-type {
+  width: 30%;
 }
 
 button {
@@ -732,38 +799,6 @@ section.dark-bg img.rotate {
   .team > .team-division > .team-member a, .team > .team-division > .team-member a:visited {
     font-size: 17px;
   }
-  footer {
-    padding: 80px;
-  }
-  footer .footer-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  footer .footer-content > .footer-link {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  footer .footer-content > .footer-logo-partner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
 }
 
 @media only screen and (min-width: 1080px) {
@@ -794,29 +829,6 @@ section.dark-bg img.rotate {
   }
   .team > .team-division > .team-member a, .team > .team-division > .team-member a:visited {
     font-size: 20px;
-  }
-  footer {
-    padding: 80px;
-  }
-  footer .footer-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  footer .footer-content > * {
-    margin: 20px;
-  }
-  footer .footer-content > .footer-logo-partner {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 

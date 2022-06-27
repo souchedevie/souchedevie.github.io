@@ -256,7 +256,7 @@ section {
         }
         @media (max-width: $bp-medium) {
             width: 100vw;
-            margin-left: -12%;
+            margin-left: -$ml;
             overflow-x: scroll;
         }
     }

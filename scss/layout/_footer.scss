@@ -1,44 +1,79 @@
-footer {
-    
+.footer {
+    $this: ".footer";
+
     background-color: $background-blue;
-    
-    .footer-content {
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4rem $ml;
+
+    @media (min-width: $bp-medium) {
+        justify-content: space-evenly;
+    }
+
+    & > * {
+        margin: 20px;
+    }
+
+    &-content {
         display: flex;
+        flex-direction: column;
 
-        & > * {
-            margin: 20px;
+        #{$this}-logo-yggdrasil {
+            margin-bottom: 2rem;
+        }
+        
+        @media (min-width: $bp-medium) {
+            flex-direction: row;
+        }
+    }
+
+    &-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 0.8rem;
+
+        @media (min-width: $bp-medium) {
+            text-align: left;
+            margin-left: 5rem;
         }
 
-        & > .footer-link {
-
-            display: flex;
-            flex-direction: column;
-
-            a {
-                font-family: "TT Commons Light";
-                font-size: 1.5rem;
-                color: $main-white;
-                text-decoration: none;
-                white-space: nowrap;
-            }
-
+        a {
+            font-family: "TT Commons Light";
+            font-size: 1.5rem;
+            color: $main-white;
+            text-decoration: none;
+            white-space: nowrap;
         }
+    }
 
-        & > .footer-logo-partner {
+    &-logo-partner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
 
-            display: flex;
+        @media (min-width: $bp-medium) {
             justify-content: center;
+            flex-direction: row;
+        }
 
-            img {
-                margin: 15%;
-                width: 100%;
+        img {
+            margin: 15% 0;
+            
+            @media (min-width: $bp-medium) {
+                margin: 0 15%;
             }
 
-            & > .footer-school-logo {
-                margin-right: 5%;
-                display: flex;
-                flex-direction: column;
+            width: 100%;
+
+            &:last-of-type{
+                width: 30%;
             }
         }
     }

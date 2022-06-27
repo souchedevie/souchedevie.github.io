@@ -53,7 +53,7 @@
 
 				display: flex; 
 				margin: 25px 0 0 0; 
-				margin-left: -12%;
+				margin-left: -$ml;
 
 				.team-member-hl { 
 					position: relative;
@@ -69,28 +69,6 @@
 				h3 { font-size: 22px; }
 				p { font-size: 17px; }
 				a, a:visited { font-size: 17px; }
-			}
-		}
-	}
-	
-	footer {
-
-		padding: 80px;
-
-		.footer-content {
-
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			
-			& > .footer-link {
-				justify-content: center;
-				align-items: center;
-			}
-
-			& > .footer-logo-partner {
-				flex-direction: column-reverse;
-				align-items: center;
 			}
 		}
 	}
@@ -118,25 +96,5 @@
 
 		}
 
-	}
-
-	footer {
-    
-		padding: 80px;
-
-		.footer-content {
-
-			display: flex;
-			flex-direction: row;
-			justify-content: space-evenly;
-
-			& > * {
-				margin: 20px;
-			}
-
-			& > .footer-logo-partner {
-				align-items: center;
-			}
-		}
 	}
 }
