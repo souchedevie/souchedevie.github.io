@@ -1,231 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Souche de vie</title>
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
-		<link rel="manifest" href="/site.webmanifest" />
-		<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-		<meta name="msapplication-TileColor" content="#da532c" />
-		<meta name="theme-color" content="#ffffff" />
-		<link rel="stylesheet" href="css/app.css" />
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
-			integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Souche de vie</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="css/app.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
 
-	<body>
-		<!-- Here is the loader -->
-		<div class="transition">
-			<div class="transition-slide"></div>
-			<div class="transition-slide"></div>
-			<div class="transition-slide"></div>
-			<div class="transition-content">
-				<span>C</span><span>h</span><span>a</span><span>r</span><span>g</span><span>e</span><span>m</span
-				><span>e</span><span>n</span><span>t</span><span>.</span><span>.</span><span>.</span>
-			</div>
-		</div>
-		<script src="loader.js"></script>
-		<!-- END of loader -->
-		<nav class="menu">
-			<div></div>
-			<ul>
-				<li><a href="#about">Le projet</a></li>
-				<li><a href="#team">Yggdrasil</a></li>
-				<li><a href="#projects">Le festival</a></li>
-			</ul>
-			<div></div>
-		</nav>
-		<header>
-			<img src="/assets/backgrounds/header-bg.png" alt="" />
-			<video autoplay muted loop>
-				<source src="/assets/backgrounds/teaser.mp4" type="video/mp4" />
-				Your browser does not support HTML5 video.
-			</video>
-			<div>
-				<div>2 juillet <img src="/assets/star-pink.png" /> 25 septembre</div>
-				<div>Square de l'Évêché</div>
-			</div>
-		</header>
+  <body>
+    <!-- Here is the loader -->
+    <div class="transition">
+      <div class="transition-slide"></div>
+      <div class="transition-slide"></div>
+      <div class="transition-slide"></div>
+      <div class="transition-content">
+        <span>C</span><span>h</span><span>a</span><span>r</span><span>g</span
+        ><span>e</span><span>m</span><span>e</span><span>n</span><span>t</span
+        ><span>.</span><span>.</span><span>.</span>
+      </div>
+    </div>
+    <script src="loader.js"></script>
+    <!-- END of loader -->
+    <nav class="menu">
+      <div></div>
+      <ul>
+        <li><a href="#about">Le projet</a></li>
+        <li><a href="#team">Yggdrasil</a></li>
+        <li><a href="#projects">Le festival</a></li>
+      </ul>
+      <div></div>
+    </nav>
+    <header>
+      <img src="/assets/backgrounds/header-bg.png" alt="" />
+      <video autoplay muted loop>
+        <source src="/assets/backgrounds/teaser.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+      <div>
+        <div>2 juillet <img src="/assets/star-pink.png" /> 25 septembre</div>
+        <div>Square de l'Évêché</div>
+      </div>
+    </header>
 
-		<div class="container">
-			<!-- HERE start about section -->
-			<section class="about" id="about">
-				<div class="element-about">
-					<h2 class="section-title">Drame au jardin</h2>
-					<div class="section-content">
-						<p>
-							C'est au cœur du jardin de l'évêché que le drame a eu lieu : un marronnier centenaire a été
-							coupé, ne laissant que sa souche derrière lui. Seul celui avec suffisamment d'attention
-							saura accomplir la dernière volonté de l'arbre et repartira avec son dernier fruit. L’heure
-							tourne, la souche n’est là que jusqu’à la fin de l’été.
-						</p>
-					</div>
-				</div>
-				<div class="element-about">
-					<h2 class="section-title">Récupérer le dernier fruit</h2>
-					<div class="section-content">
-						<p>
-							Découvrez l'expérience Souche de vie en réalité augmentée. Réalisez la dernière volonté du
-							grand marronnier au travers d'interactions sur votre téléphone.
-						</p>
-					</div>
-				</div>
-				<img src="/assets/arbre.png" alt="image arbre de vie" />
-			</section>
-			<!-- END of about section -->
-			<!-- HERE start about section -->
-			<section class="dark-bg" id="qr-code">
-				<h2 class="section-title">Installez l'application Annecy Paysages.</h2>
-				<div class="section-content">
-					<div>Venez découvrir notre expérience.</div>
-					<button>Apple Store</button>
-					<button>Google Play</button>
-					<img src="/assets/qr-code.png" alt="" class="qr-code" />
-				</div>
-				<img src="/assets/backgrounds/dark-bg-img.png" alt="" class="section-bg" />
-				<img src="/assets/download-img.png" alt="" class="rotate" />
-			</section>
-			<!-- END of about section -->
-			<section class="section team-section" id="team">
-				<h2 class="section-title">Les paysagistes à l'oeuvre</h2>
-				<div class="section-content">
-					<p>
-						Une équipe de développeurs et de designers pour une complémentarité dans la création d'une
-						expérience unique.
-					</p>
-				</div>
-				<div class="team">
-					<div class="team-division">
-						<div class="team-member">
-							<span class="team-member-hl"></span>
-							<div class="team-member">
-								<h3>Camille GENET</h3>
-								<p>Directrice artistique</p>
-								<a href="https://www.behance.net/camillegenet">Behance</a>
-							</div>
-						</div>
-						<div class="team-member">
-							<span class="team-member-hl"></span>
-							<div class="team-member">
-								<h3>Vincent FROSSARD</h3>
-								<p>Modélisateur 3D</p>
-								<a href="https://www.instagram.com/vincfrd/">Instagram</a>
-							</div>
-						</div>
-					</div>
-					<div class="team-division">
-						<div class="team-member">
-							<span class="team-member-hl"></span>
-							<div class="team-member">
-								<h3>Anaël RODET</h3>
-								<p>Développeur</p>
-								<a href="https://anael.dev/" target="_blank">anael.dev</a>
-							</div>
-						</div>
-						<div class="team-member">
-							<span class="team-member-hl"></span>
-							<div class="team-member">
-								<h3>Vincent CLERC</h3>
-								<p>Développeur</p>
-								<a href="https://www.linkedin.com/in/clerc-vincent/">Linked in</a>
-							</div>
-						</div>
-						<div class="team-member">
-							<span class="team-member-hl"></span>
-							<div class="team-member">
-								<h3>Charlotte DER BAGHDASSARIAN</h3>
-								<p>Développeuse</p>
-								<a href="http://derbagh.fr/" target="_blank">derbagh.fr</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- HERE start of project section -->
-			<section class="projects" id="projects">
-				<h2>Découvrir les autres projets Annecy Paysages</h2>
-				<p>
-					D'autres projets uniques en réalité augmentée à découvrir pendant le festival Annecy Paysages depuis
-					l’application mobile.
-				</p>
-				<div class="projects-slider">
-					<div class="projects-all">
-						<div class="project-element">
-							<a
-								href="https://www.google.com/maps/dir//Parc+Charles+Bosson,+74000+Annecy/@45.9038205,6.1436347,14.76z/data=!4m9!4m8!1m0!1m5!1m1!1s0x478b8fc27ec1145b:0x4caa00ce381d2107!2m2!1d6.1415919!2d45.9043394!3e0"
-								target="_blank"
-								><img src="/assets/naufrage.png" alt="projet le France"
-							/></a>
-							<h3>Une plongée au coeur de l’histoire</h3>
-							<p>
-								Connaissez-vous le France ? Ce bateau à vapeur qui était destiné à faire voyager
-								touristes et habitants d'Annecy sur le lac a mystérieusement coulé le 13 mars 1971… La
-								légende raconte qu’il aurait pris vie au fond du lac mais qu’il aurait besoin d’aide
-								afin d'achever sa métamorphose. Vous seul pouvez l’aider. Serez vous à la hauteur de
-								cette mission ?
-							</p>
-						</div>
-						<div class="project-element">
-							<a
-								href="https://www.google.com/maps/dir//45.8979387,6.1246826/@45.8980169,6.124427,48m/data=!3m1!1e3!4m2!4m1!3e0"
-								target="_blank"
-								><img src="/assets/triangle.png" alt="projet poesie urbaine"
-							/></a>
-							<h3>Poésie urbaine</h3>
-							<p>
-								Il y a des milliers d'années, Annecy était une ville prospère grâce à des entités
-								protectrices qui veillent sur la vallée. Malheureusement, un jour, ils ont dû quitter la
-								ville. Attristés par leur départ, les protecteurs ont pleuré si fort que de leur larme
-								est né le lac d'Annecy. Aujourd'hui, l'heure est grave, il faut faire vite. L'eau monte
-								de plus en plus, menaçant de faire disparaître toute une civilisation.
-							</p>
-						</div>
-						<div class="project-element">
-							<a
-								href="https://www.google.com/maps/dir//Puits+Saint-Jean,+Rue+du+P%C3%A2quier,+Annecy/@45.9007749,6.0913546,12221m/data=!3m2!1e3!4b1!4m9!4m8!1m0!1m5!1m1!1s0x478b8ff9f5ad6dcb:0xbd64c2cdb137df79!2m2!1d6.1263739!2d45.9007802!3e0"
-								target="_blank"
-								><img src="/assets/kowee.png" alt="projet le coeur d'Annecy"
-							/></a>
-							<h3>Le coeur d’Annecy</h3>
-							<p>
-								Un récent séisme a endommagé le cœur d’Annecy, causant d’importantes pénuries d’eau qui
-								mettent la ville en péril. Vous devez réparer la fontaine symbolisant son cœur et ainsi
-								faire revenir l’eau et la vie. Pour cela, résolvez les énigmes et percez ses secrets…
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- END of projects section -->
-		</div>
+    <div class="container">
+      <!-- HERE start about section -->
+      <section class="about" id="about">
+        <div class="element-about">
+          <h2 class="section-title">Drame au jardin</h2>
+          <div class="section-content">
+            <p>
+              C'est au cœur du jardin de l'évêché que le drame a eu lieu : un
+              marronnier centenaire a été coupé, ne laissant que sa souche
+              derrière lui. Seul celui avec suffisamment d'attention saura
+              accomplir la dernière volonté de l'arbre et repartira avec son
+              dernier fruit. L’heure tourne, la souche n’est là que jusqu’à la
+              fin de l’été.
+            </p>
+          </div>
+        </div>
+        <div class="element-about">
+          <h2 class="section-title">Récupérer le dernier fruit</h2>
+          <div class="section-content">
+            <p>
+              Découvrez l'expérience Souche de vie en réalité augmentée.
+              Réalisez la dernière volonté du grand marronnier au travers
+              d'interactions sur votre téléphone.
+            </p>
+          </div>
+        </div>
+        <img src="/assets/arbre.png" alt="image arbre de vie" />
+      </section>
+      <!-- END of about section -->
+      <!-- HERE start about section -->
+      <section class="dark-bg" id="qr-code">
+        <h2 class="section-title">Installez l'application Annecy Paysages.</h2>
+        <div class="section-content">
+          <div>Venez découvrir notre expérience.</div>
+          <button>Apple Store</button>
+          <button>Google Play</button>
+          <img src="/assets/qr-code.png" alt="" class="qr-code" />
+        </div>
+        <img
+          src="/assets/backgrounds/dark-bg-img.png"
+          alt=""
+          class="section-bg"
+        />
+        <img src="/assets/download-img.png" alt="" class="rotate" />
+      </section>
+      <!-- END of about section -->
+      <section class="section team-section" id="team">
+        <h2 class="section-title">Les paysagistes à l'oeuvre</h2>
+        <div class="section-content">
+          <p>
+            Une équipe de développeurs et de designers pour une complémentarité
+            dans la création d'une expérience unique.
+          </p>
+        </div>
+        <div class="team">
+          <div class="team-division">
+            <div class="team-member">
+              <span class="team-member-hl"></span>
+              <div class="team-member">
+                <h3>Camille GENET</h3>
+                <p>Directrice artistique</p>
+                <a href="https://www.behance.net/camillegenet">Behance</a>
+              </div>
+            </div>
+            <div class="team-member">
+              <span class="team-member-hl"></span>
+              <div class="team-member">
+                <h3>Vincent FROSSARD</h3>
+                <p>Modélisateur 3D</p>
+                <a href="https://www.instagram.com/vincfrd/">Instagram</a>
+              </div>
+            </div>
+          </div>
+          <div class="team-division">
+            <div class="team-member">
+              <span class="team-member-hl"></span>
+              <div class="team-member">
+                <h3>Anaël RODET</h3>
+                <p>Développeur</p>
+                <a href="https://anael.dev/" target="_blank">anael.dev</a>
+              </div>
+            </div>
+            <div class="team-member">
+              <span class="team-member-hl"></span>
+              <div class="team-member">
+                <h3>Vincent CLERC</h3>
+                <p>Développeur</p>
+                <a href="https://www.linkedin.com/in/clerc-vincent/"
+                  >Linked in</a
+                >
+              </div>
+            </div>
+            <div class="team-member">
+              <span class="team-member-hl"></span>
+              <div class="team-member">
+                <h3>Charlotte DER BAGHDASSARIAN</h3>
+                <p>Développeuse</p>
+                <a href="http://derbagh.fr/" target="_blank">derbagh.fr</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- HERE start of project section -->
+      <section class="projects" id="projects">
+        <h2>Découvrir les autres projets Annecy Paysages</h2>
+        <p>
+          D'autres projets uniques en réalité augmentée à découvrir pendant le
+          festival Annecy Paysages depuis l’application mobile.
+        </p>
+        <div class="projects-slider">
+          <div class="projects-all">
+            <div class="project-element">
+              <a
+                href="https://www.google.com/maps/dir//Parc+Charles+Bosson,+74000+Annecy/@45.9038205,6.1436347,14.76z/data=!4m9!4m8!1m0!1m5!1m1!1s0x478b8fc27ec1145b:0x4caa00ce381d2107!2m2!1d6.1415919!2d45.9043394!3e0"
+                target="_blank"
+                ><img src="/assets/naufrage.png" alt="projet le France"
+              /></a>
+              <h3>Une plongée au coeur de l’histoire</h3>
+              <p>
+                Connaissez-vous le France ? Ce bateau à vapeur qui était destiné
+                à faire voyager touristes et habitants d'Annecy sur le lac a
+                mystérieusement coulé le 13 mars 1971… La légende raconte qu’il
+                aurait pris vie au fond du lac mais qu’il aurait besoin d’aide
+                afin d'achever sa métamorphose. Vous seul pouvez l’aider. Serez
+                vous à la hauteur de cette mission ?
+              </p>
+            </div>
+            <div class="project-element">
+              <a
+                href="https://www.google.com/maps/dir//45.8979387,6.1246826/@45.8980169,6.124427,48m/data=!3m1!1e3!4m2!4m1!3e0"
+                target="_blank"
+                ><img src="/assets/triangle.png" alt="projet poesie urbaine"
+              /></a>
+              <h3>Poésie urbaine</h3>
+              <p>
+                Il y a des milliers d'années, Annecy était une ville prospère
+                grâce à des entités protectrices qui veillent sur la vallée.
+                Malheureusement, un jour, ils ont dû quitter la ville. Attristés
+                par leur départ, les protecteurs ont pleuré si fort que de leur
+                larme est né le lac d'Annecy. Aujourd'hui, l'heure est grave, il
+                faut faire vite. L'eau monte de plus en plus, menaçant de faire
+                disparaître toute une civilisation.
+              </p>
+            </div>
+            <div class="project-element">
+              <a
+                href="https://www.google.com/maps/dir//Puits+Saint-Jean,+Rue+du+P%C3%A2quier,+Annecy/@45.9007749,6.0913546,12221m/data=!3m2!1e3!4b1!4m9!4m8!1m0!1m5!1m1!1s0x478b8ff9f5ad6dcb:0xbd64c2cdb137df79!2m2!1d6.1263739!2d45.9007802!3e0"
+                target="_blank"
+                ><img src="/assets/kowee.png" alt="projet le coeur d'Annecy"
+              /></a>
+              <h3>Le coeur d’Annecy</h3>
+              <p>
+                Un récent séisme a endommagé le cœur d’Annecy, causant
+                d’importantes pénuries d’eau qui mettent la ville en péril. Vous
+                devez réparer la fontaine symbolisant son cœur et ainsi faire
+                revenir l’eau et la vie. Pour cela, résolvez les énigmes et
+                percez ses secrets…
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END of projects section -->
+    </div>
 
-		<footer class="footer">
-			<div class="footer-content">
-				<div class="footer-logo-yggdrasil">
-					<img src="/assets/logo/logo.svg" alt="" />
-				</div>
-				<div class="footer-link">
-					<a href="https://www.youtube.com/watch?v=mbcZMUz6BTk" target="_blank">Teaser</a>
-					<a href="https://www.annecy-paysages.com/lapplication/" target="_blank"
-						>Télécharger l'application</a
-					>
-					<a href="#projects">Les autres projets</a>
-					<a href="mentions-legales.html">Mentions légales</a>
-				</div>
-			</div>
-			<div class="footer-logo-partner">
-				<img src="/assets/footer/gobelins.png" alt="" />
-				<img src="/assets/footer/cci.png" alt="" />
-				<img src="/assets/footer/annecypaysages.png" alt="" />
-			</div>
-		</footer>
-	</body>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo-yggdrasil">
+          <img src="/assets/logo/logo.svg" alt="" />
+        </div>
+        <div class="footer-link">
+          <a href="https://www.youtube.com/watch?v=mbcZMUz6BTk" target="_blank"
+            >Teaser</a
+          >
+          <a
+            href="https://www.annecy-paysages.com/lapplication/"
+            target="_blank"
+            >Télécharger l'application</a
+          >
+          <a href="#projects">Les autres projets</a>
+          <a href="mentions-legales.html">Mentions légales</a>
+        </div>
+      </div>
+      <div class="footer-logo-partner">
+        <img src="/assets/footer/gobelins.png" alt="" />
+        <img src="/assets/footer/cci.png" alt="" />
+        <img src="/assets/footer/annecypaysages.png" alt="" />
+      </div>
+    </footer>
+  </body>
 </html>

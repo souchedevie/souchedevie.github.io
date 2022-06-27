@@ -32,5 +32,6 @@ window.addEventListener("load", () => {
     })
     .set(".transition", {
       zIndex: -1,
+      display: "none",
     });
 });
