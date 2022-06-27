@@ -253,13 +253,16 @@ header > img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 750px) {
   .footer-logo-partner {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -272,7 +275,7 @@ header > img {
 
 .footer-logo-partner img {
   margin: 15% 0;
-  width: 100%;
+  width: 60%;
 }
 
 @media (min-width: 750px) {
@@ -281,8 +284,13 @@ header > img {
   }
 }
 
-.footer-logo-partner img:last-of-type {
-  width: 30%;
+@media (min-width: 750px) {
+  .footer-logo-partner img:last-of-type {
+    width: 30%;
+  }
+  .footer-logo-partner img:nth-of-type(1) {
+    width: 40%;
+  }
 }
 
 button {
