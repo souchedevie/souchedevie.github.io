@@ -53,6 +53,12 @@
     </div>
     <script src="loader.js"></script>
     <!-- END of loader -->
+    <div id="burger">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48">
+        <rect></rect>
+        <rect></rect>
+      </svg>
+    </div>
     <nav class="menu">
       <div></div>
       <ul>
@@ -263,5 +269,55 @@
         <img src="/assets/footer/annecypaysages.png" alt="" />
       </div>
     </footer>
+    <script>
+      let menuIsOpen = false;
+      const burgerMenuIco = document.querySelector("#burger");
+
+      if (window.innerWidth < 750) {
+        const menuAnimation = gsap
+          .timeline({ paused: true })
+          .from(".menu", {
+            duration: 0.6,
+            x: "100vw",
+            ease: "expo.out",
+          })
+          .from(
+            ".menu > ul > li",
+            {
+              duration: 0.6,
+              x: 150,
+              opacity: 0,
+              stagger: 0.1,
+              ease: "expo.out",
+            },
+            "<0.4"
+          );
+
+        burgerMenuIco.addEventListener("click", () => {
+          burgerMenuIco.classList.toggle("active");
+          if (menuIsOpen) {
+            menuAnimation.timeScale(1.5).reverse();
+          } else {
+            menuAnimation.play();
+          }
+          menuIsOpen = !menuIsOpen;
+        });
+        // document
+        //   .querySelectorAll(".menu > ul > li")
+        //   .forEach.addEventListener("click", () => {
+        //     burgerMenuIco.classList.toggle("active");
+        //     menuAnimation.timeScale(1.5).reverse();
+        //     menuIsOpen = !menuIsOpen;
+        //   });
+
+        document.querySelectorAll(".menu > ul > li").forEach((e) => {
+          e.addEventListener("click", () => {
+            burgerMenuIco.classList.toggle("active");
+            menuAnimation.timeScale(1.5).reverse();
+            menuIsOpen = !menuIsOpen;
+          });
+        });
+      }
+    </script>
   </body>
 </html>

@@ -74,6 +74,69 @@ header > img {
   }
 }
 
+#burger {
+  position: fixed;
+  inset: 30px 30px auto auto;
+  z-index: 15;
+  background-color: #181556;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+@media (min-width: 750px) {
+  #burger {
+    display: none;
+  }
+}
+
+#burger svg {
+  position: absolute;
+  margin: auto auto 6px auto;
+  inset: 0;
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+  cursor: pointer;
+}
+
+#burger svg rect {
+  width: 48px;
+  height: 3px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+#burger svg rect:nth-child(1) {
+  y: 20px;
+  -webkit-transform-origin: 24px 15px;
+          transform-origin: 24px 15px;
+}
+
+#burger svg rect:nth-child(2) {
+  -webkit-transform-origin: 3px 17px;
+          transform-origin: 3px 17px;
+}
+
+#burger.active svg rect {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+#burger.active svg rect:nth-child(1) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#burger.active svg rect:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 .menu {
   z-index: 11;
   display: -webkit-box;
@@ -90,35 +153,40 @@ header > img {
   top: 0;
   font-family: "Abhaya Libre";
   width: 100vw;
+  height: 100vh;
+  background-color: #181556;
 }
 
 @media (min-width: 750px) {
   .menu {
     width: auto;
     height: 100vh;
+    background-color: transparent;
   }
 }
 
 .menu ul {
-  margin: 0;
+  margin: auto;
   padding: 1.5rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #2526cc;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
 }
 
 @media (min-width: 750px) {
   .menu ul {
+    margin: 0;
     width: auto;
-    display: block;
-    background-color: transparent;
+    height: auto;
+    gap: 0;
   }
 }
 
@@ -127,12 +195,7 @@ header > img {
   color: #2526cc;
   font-size: 1.5rem;
   text-align: center;
-}
-
-@media (min-width: 750px) {
-  .menu ul li {
-    margin-bottom: 0.5rem;
-  }
+  margin-bottom: 0.5rem;
 }
 
 .menu ul li a {
