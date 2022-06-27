@@ -58,6 +58,12 @@ section {
 
         #{$this}-title {
             color: white;
+            margin-bottom: 0;
+            text-align: center;
+
+            @media (min-width: $bp-medium) {
+                text-align: left;
+            }
         }
 
         #{$this}-content {
@@ -79,6 +85,10 @@ section {
 
             & > button {
                 display: block;
+                
+                &:first-of-type {
+                    margin-top: 2rem;
+                }
 
                 @media (min-width: $bp-medium) {
                     display: none;
@@ -90,8 +100,9 @@ section {
 
                 @media (min-width: $bp-medium) {
                     display: block;
-                    width: 20vw;
-                    margin-bottom: 2rem;
+                    width: 12rem;
+                    margin-bottom: 1rem;
+                    margin-top: 2rem;
                 }
             }
         }
@@ -102,13 +113,16 @@ section {
 
         & img.rotate {
             position: absolute;
-            top: -7rem;
+            top: -5rem;
             right: 0;
             animation: 5s linear infinite rotate;
             transform-origin: center;
+            width: 40%;
 
             @media (min-width: $bp-medium) {
+                width: auto;
                 right: 3rem;
+                top: -7rem;
             }
 
             @keyframes rotate {
@@ -258,11 +272,21 @@ section {
         }
         .project-element {
             width: 100%;
+
             @media (max-width: $bp-medium) {
                 width: 60vw;
             }
             img {
                 width: 100%;
+            }
+
+            p {
+                @media (max-width: $bp-mobile) {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    -webkit-line-clamp: 3;
+                }
             }
         }
     }
